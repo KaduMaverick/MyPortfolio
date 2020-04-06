@@ -1,5 +1,6 @@
 <template>
   <div :class="this.$store.state.mode">
+    <Navigation />
     <nuxt/>
     <Idioms />
     <Social />
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+import Navigation from '~/components/navigation.vue'
 import Idioms from '~/components/Idioms.vue';
 import Social from '~/components/Social.vue';
 import ThemeSwitch from '~/components/ThemeSwitch.vue';
@@ -15,7 +17,8 @@ export default {
   components: {
     Idioms,
     Social,
-    ThemeSwitch
+    ThemeSwitch,
+    Navigation
   }
 }
 </script>
@@ -69,4 +72,5 @@ body.light-theme{
   max-width: 120rem;
   margin: 0 auto;
 }
+
 </style>

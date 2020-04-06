@@ -43,6 +43,7 @@ export default {
   position: absolute;
   bottom: 6rem;
   left: 6rem;
+  z-index: 1000;
   &:after {
     content: "";
     display: block;

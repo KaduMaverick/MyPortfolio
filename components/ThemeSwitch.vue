@@ -42,6 +42,7 @@ export default {
   background: $secondary-color;
   border-radius: 50px;
   position: absolute;
+  z-index: 1000;
   top: 5rem;
   left: 5rem;
   cursor: pointer;

@@ -125,6 +125,7 @@ export default {
   position: absolute;
   bottom: 6rem;
   right: 6rem;
+  z-index: 1000;
   &:after {
     content: "";
     display: block;
@@ -135,7 +136,6 @@ export default {
     bottom: -7rem;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.35);
-    transition: all .5s ease;
   }
   &__list {
     text-align: center;
