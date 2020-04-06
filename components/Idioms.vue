@@ -7,10 +7,15 @@
         class="idioms__items"
       >EN</li>
       <li
-        v-on:click="changeLocale('fr')"
-        v-bind:class="currentLanguage == 'fr' ?  'idioms__items--active' : ''"
+        v-on:click="changeLocale('pt')"
+        v-bind:class="currentLanguage == 'pt' ?  'idioms__items--active' : ''"
         class="idioms__items"
-      >FR</li>
+      >PT</li>
+      <li
+        v-on:click="changeLocale('es')"
+        v-bind:class="currentLanguage == 'es' ?  'idioms__items--active' : ''"
+        class="idioms__items"
+      >ES</li>
       <li
         v-on:click="changeLocale('zncn')"
         v-bind:class="currentLanguage == 'zncn' ?  'idioms__items--active' : ''"
@@ -74,12 +79,10 @@ export default {
 }
 
 .light .idioms {
- 
   &:after {
     background-color: $light-primary-color;
   }
   &__list {
- 
   }
   &__items {
     color: $light-primary-color;
@@ -89,5 +92,4 @@ export default {
     }
   }
 }
-
 </style>

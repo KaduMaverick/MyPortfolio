@@ -22,7 +22,7 @@ export default {};
 
 .home {
   color: $primary-color;
-  font-family: "InterRegular";
+  font-family: "InterRegular","Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
 
   &__name {
     position: absolute;
@@ -36,7 +36,7 @@ export default {};
     color: $primary-color;
   }
   &__heading {
-    font-family: "InterBold";
+    font-family: "InterBold","Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
     font-size: 4.8rem;
     font-style: normal;
     font-weight: bold;
@@ -44,7 +44,7 @@ export default {};
     top: 22.6rem;
 
     h3 {
-      font-family: "Istok Web";
+      font-family: "Istok Web", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
       font-style: normal;
       font-weight: normal;
       font-size: 1.8rem;
@@ -58,11 +58,12 @@ export default {};
     }
 
     &__sub-title {
+      font-family: "InterBold",'36',"Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
       color: $secondary-color;
     }
 
     &__paragraph {
-      font-family: "InterRegular";
+      font-family: "InterRegular", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
       font-style: normal;
       font-weight: normal;
       font-size: 1.8rem;

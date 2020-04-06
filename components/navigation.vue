@@ -9,16 +9,16 @@
       <div v-if="isMenuShown" class="main-nav">
         <ul class="main-nav__items">
           <li class="main-nav__item" data-bg="featured-work-2">
-            <a href class="main-nav__link">Projetos</a>
+            <a href class="main-nav__link">{{ this.$t('nav.projects') }}</a>
           </li>
           <li class="main-nav__item" data-bg="interactive-web-design">
-            <a href class="main-nav__link">Skills</a>
+            <a href class="main-nav__link">{{ this.$t('nav.skills') }}</a>
           </li>
           <li class="main-nav__item" @mouseover="changeVideoBg()" data-bg="about-us">
-            <a href class="main-nav__link">Sobre</a>
+            <a href class="main-nav__link">{{ this.$t('nav.about') }}</a>
           </li>
           <li class="main-nav__item" data-bg="corporate-identity-branding">
-            <nuxt-link to="/contact" class="main-nav__link">Contato</nuxt-link>
+            <nuxt-link to="/contact" class="main-nav__link">{{ this.$t('nav.contact') }}</nuxt-link>
           </li>
         </ul>
       </div>
@@ -268,7 +268,7 @@ export default {
   }
 
   &__link {
-    font-family: "InterBold";
+    font-family: "InterBold", "36";
     font-size: 4.8rem;
     font-style: normal;
     font-weight: bold;

@@ -19,8 +19,9 @@ export default ({ app }) => {
     // Associate each locale to a content file    
     messages: {
       en: require("~/static/content-en.json"),
-      fr: require("~/static/content-fr.json"),
-      zncn: require("~/static/content-zh-cn.json")
+      es: require("~/static/content-es.json"),
+      zncn: require("~/static/content-zh-cn.json"),
+      pt: require("~/static/content-pt.json")
     }
   });
 };

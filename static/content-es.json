@@ -1,0 +1,14 @@
+{
+  "nav":{
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "about": "Sobre",
+    "contact":"Contacto"
+  },
+  "home": {
+    "greeting": "Hola, soy un",
+    "heading": "Desarrollador",
+    "subHeading": "Codifico / diseño para la web.",
+    "paragraph": "Soy un desarrollador web con sede in Brasil, que se especializa en crear (y ocasionalmente diseñar) sitios web y aplicaciones excepcionales de alta calidad"
+  }
+}

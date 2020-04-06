@@ -50,6 +50,12 @@ export default {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "36";
+  src: url("../assets/fonts/36.ttf") format("truetype");
+  
+}
+
 html {
   font-family: "InterRegular", "Source Sans Pro", -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

@@ -15,6 +15,7 @@ module.exports = {
       },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link:[{ href: "https://fonts.googleapis.com/css?family=Istok+Web&display=swap", rel:"stylesheet"}]
   },
   /*
    ** Customize the progress-bar color
