@@ -75,8 +75,29 @@ body.light-theme{
 }
 
 .u-wrapper {
-  max-width: 120rem;
+  max-width: 100rem;
   margin: 0 auto;
 }
+
+p{
+  font-family: "InterRegular", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #ffffff;
+}
+
+
+.title{
+  font-size: 6.4rem;
+      font-style: normal;
+      font-weight: bold;
+      font-family: "InterBold", "36", "Microsoft YaHei New", "Microsoft Yahei",
+        "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
+      color: #8cb9b4;
+      display: inline-block;
+}
+
 
 </style>
