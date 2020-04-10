@@ -122,7 +122,7 @@ export default {
 
 <style lang="scss">
 .social {
-  position: absolute;
+  position: fixed;
   bottom: 6rem;
   right: 6rem;
   z-index: 1000;

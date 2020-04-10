@@ -21,33 +21,38 @@
         <h1>WHO AM I?</h1>
       </div>
       <div class="about__content">
-          <div>
-        <p>Hello! I'm Kadu, a developer based in Brazil, who enjoys solving problems with tech. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.</p>
-        <p>Shortly after coming back from China,where I was living and working as a English teacher, I started my learning path into computer science and I developed a passion for building things and solving problems.</p>
+          <div class="about__content__text" > 
+        <p>Hello! I'm Kadu, a developer based in Brazil, who enjoys <b class="green">solving problems</b> with tech.<b class="yellow"> I develop exceptional websites and web apps</b> that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.</p>
+        <p>Shortly after coming back from China,where I was living and working as a English teacher, I started my learning path into <b class="purple">computer science</b> and I developed a passion for building things and solving problems.</p>
           </div>
-        <img src="@/assets/img/me-portrait.png" alt="" srcset="">
-        <h1 class="title about__title">Arsenal</h1>
-        <p>Here are a few technologies I've been working with recently</p>
+        <!-- <img src="@/assets/img/me-portrait.png" alt="" srcset=""> -->
+        <Arsenal/>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+import Arsenal from './Arsenal.vue';
+export default {
+  components:{
+    Arsenal
+  }
+};
 </script>
 
 <style lang="scss">
 .about {
   background-color: #070608;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 
   &__container {
     width: 100rem;
     margin: 0 auto;
     position: relative;
     height: inherit;
+
   }
   &__heading {
     line-height: 6.7rem;
@@ -68,14 +73,20 @@ export default {};
   }
 
   &__content{
-      padding: 9rem 0 0 9rem;
-      div{
+      padding: 12rem 0 12rem 9rem;
+      &__text{
           display: inline-block;
-          max-width: 50rem;
+          // max-width: 50rem;
+              font-size: 2.8rem;
+    line-height: 4rem;
+    text-align: center;
+    // color: #ffffff;
+    // max-width: 60rem;
+    // margin-top: 7.2rem;
       }
       p{
-          display: inline-block;
-          margin-bottom: 2rem;
+        //   display: inline-block;
+          margin-bottom: 3rem;
       }
 
       img{
@@ -84,9 +95,5 @@ export default {};
       }
   }
 
-  &__title{
-      margin-top: 20rem;
-      text-transform: uppercase;
-  }
 }
 </style>

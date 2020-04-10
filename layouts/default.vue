@@ -1,7 +1,7 @@
 <template>
   <div :class="this.$store.state.mode">
     <Navigation />
-    <nuxt/>
+    <nuxt />
     <Idioms />
     <Social />
     <ThemeSwitch />
@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import Navigation from '~/components/navigation.vue'
-import Idioms from '~/components/Idioms.vue';
-import Social from '~/components/Social.vue';
-import ThemeSwitch from '~/components/ThemeSwitch.vue';
+import Navigation from "~/components/navigation.vue";
+import Idioms from "~/components/Idioms.vue";
+import Social from "~/components/Social.vue";
+import ThemeSwitch from "~/components/ThemeSwitch.vue";
 export default {
   components: {
     Idioms,
@@ -20,14 +20,14 @@ export default {
     ThemeSwitch,
     Navigation
   }
-}
+};
 </script>
 
 <style lang="scss">
 // @import url("../assets/scss/reset.scss");
 // @import url("../assets/scss/variables.scss");
 
-@import url('https://fonts.googleapis.com/css?family=Istok+Web&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Istok+Web&display=swap");
 
 @font-face {
   font-family: "InterRegular";
@@ -45,7 +45,8 @@ export default {
 
 @font-face {
   font-family: "TitlingGothicFBComp-Stand";
-  src: url("../assets/fonts/titlinggothicfb/TitlingGothicFBComp-Stand.otf") format("otf");
+  src: url("../assets/fonts/titlinggothicfb/TitlingGothicFBComp-Stand.otf")
+    format("otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -53,7 +54,6 @@ export default {
 @font-face {
   font-family: "36";
   src: url("../assets/fonts/36.ttf") format("truetype");
-  
 }
 
 html {
@@ -70,7 +70,7 @@ body {
   background-color: #000;
 }
 
-body.light-theme{
+body.light-theme {
   background-color: #fff;
 }
 
@@ -79,25 +79,34 @@ body.light-theme{
   margin: 0 auto;
 }
 
-p{
-  font-family: "InterRegular", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
+p {
+  font-family: "InterRegular", "Microsoft YaHei New", "Microsoft Yahei",
+    "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
   font-style: normal;
   font-weight: normal;
-  font-size: 1.8rem;
-  line-height: 2.2rem;
   color: #ffffff;
 }
 
-
-.title{
+.title {
   font-size: 6.4rem;
-      font-style: normal;
-      font-weight: bold;
-      font-family: "InterBold", "36", "Microsoft YaHei New", "Microsoft Yahei",
-        "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
-      color: #8cb9b4;
-      display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-family: "InterBold", "36", "Microsoft YaHei New", "Microsoft Yahei",
+    "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
+  color: #8cb9b4;
+  display: inline-block;
 }
 
+b.green {
+  color: #67c74f;
+}
+
+b.yellow{
+  color:#e5a500;
+}
+
+b.purple{
+  color: #608afe;
+}
 
 </style>

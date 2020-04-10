@@ -60,8 +60,9 @@ export default {};
     }
 
     &__title {
-      line-height: 5.7rem;
+      line-height: 6.7rem;
       color: #ffffff;
+      font-size: 7.4rem;
     }
 
     &__sub-title {
@@ -76,10 +77,13 @@ export default {};
       font-family: "InterRegular", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
       font-style: normal;
       font-weight: normal;
-      font-size: 1.8rem;
-      line-height: 22px;
+      // font-size: 1.8rem;
+      font-size: 2.8rem;
+      // line-height: 22px;
+      line-height: 4rem;
       color: #ffffff;
-      max-width: 44.2rem;
+      // max-width: 44.2rem;
+          max-width: 60rem;
       margin-top: 7.2rem;
     }
   }

@@ -45,7 +45,7 @@ export default {
 
 <style lang="scss">
 .idioms {
-  position: absolute;
+  position: fixed;
   bottom: 6rem;
   left: 6rem;
   z-index: 1000;
