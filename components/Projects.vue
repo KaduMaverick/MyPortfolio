@@ -41,7 +41,7 @@
 
 <style lang="scss">
 .projects {
-  background-color: #070608;
+  background-color: $background-secondary-color;
   position: relative;
   min-height: 100vh;
 
@@ -64,7 +64,7 @@
       font-weight: bold;
       font-family: "InterBold", "36", "Microsoft YaHei New", "Microsoft Yahei",
         "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
-      color: #8cb9b4;
+      color: $secondary-color;
       display: inline-block;
     }
   }
@@ -80,7 +80,7 @@
     height: 27rem;
     width: 27rem;
     // border: 3px solid firebrick;
-    background: #110f15;
+    background: $card-background-color;
     margin-bottom: 4rem;
     padding: 2rem;
     position: relative;
@@ -90,7 +90,7 @@
       font-weight: bold;
       font-size: 1.7rem;
       line-height: 20px;
-      color: #ffffff;
+      color: $primary-color;
       height: 7rem;
     }
 
@@ -100,7 +100,7 @@
       font-weight: normal;
       font-size: 12px;
       line-height: 17px;
-      color: #ffffff;
+      color: $primary-color;
     }
 
     &__tag {
@@ -114,8 +114,35 @@
         font-weight: normal;
         font-size: 14px;
         line-height: 20px;
-        color: #ffffff;
+        color: $primary-color;
         margin: 0.3rem 0;
+      }
+    }
+  }
+}
+
+.light .projects {
+  background-color: $light-background-secondary-color;
+
+  &__heading {
+    h1 {
+      color: $light-secondary-color;
+    }
+  }
+
+  &__card {
+    background: $light-card-background-color;
+    h5 {
+      color: $light-primary-color;
+    }
+
+    p {
+      color: $light-primary-color;
+    }
+
+    &__tag {
+      span {
+        color: $light-primary-color;
       }
     }
   }

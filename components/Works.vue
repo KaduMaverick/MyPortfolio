@@ -2,23 +2,13 @@
   <section class="works">
     <img class="works__img-bg" src="@/assets/img/worldmap.png" alt srcset />
     <div class="works__heading">
-      <h1 class="title">I’M PROUD OF</h1>
-      <svg
-        class="works__heading__line"
-        width="1500"
-        height="4"
-        viewBox="0 0 672 4"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <line y1="2" x2="1500" y2="2" stroke="#8CB9B4" stroke-width="4" />
-      </svg>
+      <h1 class="title works__title">I’M PROUD OF</h1>
     </div>
 
     <div class="u-wrapper works__container">
       <div class="works__content">
-        <div class="works__content__project" v-for="n in 3" v-bind:key='n'>
-          <h1 class="works__title">Tracker</h1>
+        <div class="works__content__project" v-for="n in 3" v-bind:key="n">
+          <h1 class="works__content__project__title">Tracker</h1>
           <p>Runlet provides an easy to use interface to manage jobs across a fleet of connected devices, including the capability of triggering remote executions and viewing the logs of running jobs in real-time.</p>
           <div class="works__content__project__img">
             <img src="@/assets/img/project-1.png" alt srcset />
@@ -41,6 +31,9 @@ export default {};
   // width: 100vw;
   overflow: hidden;
   position: relative;
+  &__title {
+    color: $secondary-color;
+  }
   &__img-bg {
     position: absolute;
   }
@@ -55,19 +48,24 @@ export default {};
     text-align: center;
     margin-top: 12rem;
     position: relative;
-
-    &__line {
-      position: absolute;
-      bottom: 0;
-      right: -8%;
-    }
   }
 
   &__content {
     &__project {
       font-size: 2.2rem;
       text-align: center;
-    margin-bottom: 12rem;
+      margin-bottom: 12rem;
+      &__title {
+        display: block;
+        text-align: center;
+        font-size: 5rem;
+        font-weight: bold;
+        color: $tertiary-color;
+        margin-bottom: 4.8rem;
+      }
+      p {
+        color: $primary-color;
+      }
       &__img {
         width: 100%;
         border-radius: 5px;
@@ -75,28 +73,37 @@ export default {};
         margin-top: 4rem;
         filter: grayscale(0.9);
         cursor: pointer;
-        transition: all 0.8s  ease;
+        transition: all 0.8s ease;
         img {
           width: 100%;
-          transition: all 0.8s  ease;
+          transition: all 0.8s ease;
         }
 
-        &:hover{
-            filter: grayscale(0);
-            img{
-                transform: scale(1.05);
-            }
+        &:hover {
+          filter: grayscale(0);
+          img {
+            transform: scale(1.05);
+          }
         }
       }
     }
   }
+}
+
+.light .works {
   &__title {
-    display: block;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 4.8rem;
+    color: $light-secondary-color;
+  }
+
+  &__content {
+    &__project {
+      p{
+        color: $light-primary-color;
+      }
+      &__title {
+        color: $light-tertiary-color;
+      }
+    }
   }
 }
 </style>

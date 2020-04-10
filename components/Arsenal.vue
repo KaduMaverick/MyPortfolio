@@ -33,10 +33,11 @@ export default {};
   &__title {
     margin-top: 15rem;
     text-transform: uppercase;
+    color: $secondary-color;
   }
 
   &__sub-title {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
     margin-left: 22rem;
     margin-top: -2rem;
   }
@@ -48,10 +49,10 @@ export default {};
   //   &__col-1 {
   //     display: inline-block;
   //   }
-    &__col-2 {
-      display: inline-block;
-      padding: 0 2rem;
-    }
+  &__col-2 {
+    display: inline-block;
+    padding: 0 2rem;
+  }
 
   &__menu {
     li {
@@ -61,21 +62,21 @@ export default {};
       font-style: normal;
       font-weight: normal;
       font-size: 1.3rem;
-      color: white;
+      color: $primary-color;
       text-align: right;
       padding: 0.8rem 0.8rem;
       text-transform: uppercase;
-      border-right: 2px solid white;
+      border-right: 2px solid $primary-color;
       cursor: pointer;
-      &:hover{
-          border-right: 2px solid #8cb9b4;
-          color: #8cb9b4;
+      &:hover {
+        border-right: 2px solid $secondary-color;
+        color: $secondary-color;
       }
     }
   }
   &__list {
-      display: inline-block;
-   
+    display: inline-block;
+
     li {
       list-style: none;
       font-family: "Istok Web", "Microsoft YaHei New", "Microsoft Yahei",
@@ -83,18 +84,44 @@ export default {};
       font-style: normal;
       font-weight: normal;
       font-size: 1.3rem;
-      color: white;
+      color: $primary-color;
       text-align: left;
       padding: 0.5rem;
 
-      &:before{
-          content: "";
-          display: inline-block;
-          height: 10px;
-          width: 10px;
-          border-radius: 50%;
-          background: #8cb9b4;
-          margin-right: 1rem;
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background: $secondary-color;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.light .arsenal {
+  &__title {
+    color: $light-secondary-color;
+  }
+  &__menu {
+    li {
+      color: $light-primary-color;
+      border-right: 2px solid $light-primary-color;
+
+      &:hover {
+        border-right: 2px solid $light-secondary-color;
+        color: $light-secondary-color;
+      }
+    }
+  }
+  &__list {
+    li {
+      color: $light-primary-color;
+
+      &:before {
+        background: $light-secondary-color;
       }
     }
   }

@@ -84,7 +84,6 @@ p {
     "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
   font-style: normal;
   font-weight: normal;
-  color: #ffffff;
 }
 
 .title {
