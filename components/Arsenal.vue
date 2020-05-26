@@ -4,20 +4,16 @@
     <p class="arsenal__sub-title">Here are a few technologies I've been working with recently</p>
     <div class="arsenal__box">
       <div class="arsenal__col-1">
-        <ul class="arsenal__menu">
-          <li>Knowledge</li>
-          <li>Skills</li>
-          <li>Tools</li>
+        <ul class="arsenal__menu" >
+          <li v-for="(item, index) in arsenalOptions" :key="index" v-html="item" v-bind:class="currentOption === item ? 'active' : ''" @click="changeOption(item)"></li>
         </ul>
       </div>
       <div class="arsenal__col-2">
         <ul class="arsenal__list">
-          <li>Knowledge</li>
-          <li>Skills</li>
-          <li>Tools</li>
-          <li>Knowledge</li>
-          <li>Skills</li>
-          <li>Tools</li>
+        <transition name="fade" v-for="(item, index) in arsenalData[currentOption]" v-bind:key="index">
+          <li  v-html="item">
+          </li>
+        </transition>
         </ul>
       </div>
     </div>
@@ -25,10 +21,44 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data (){
+    return {
+      currentOption: null,
+      arsenalOptions: this.$t('arsenal.arsenalOptions'),
+      arsenalData: this.$t('arsenal.arsenalData'),
+    }
+  },
+  created(){
+    this.currentOption = this.arsenalOptions[0] 
+    // console.log(this.i18n.locale)
+  },
+  methods: {
+    changeOption(value){
+      this.currentOption = value
+    }
+  },
+  computed: {
+    getCurrentLocale() {
+      return this.$store.state.currentLocale
+    }
+  },
+  watch: {
+    getCurrentLocale(newLocale, oldLocale) {
+      this.arsenalOptions = this.$t('arsenal.arsenalOptions')
+      this.arsenalData = this.$t('arsenal.arsenalData')
+    }
+  }
+};
 </script>
 
 <style lang="scss">
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 .arsenal {
   &__title {
     margin-top: 15rem;
@@ -52,9 +82,11 @@ export default {};
   &__col-2 {
     display: inline-block;
     padding: 0 2rem;
+    width: 100%;
   }
 
   &__menu {
+    
     li {
       list-style: none;
       font-family: "Istok Web", "Microsoft YaHei New", "Microsoft Yahei",
@@ -68,15 +100,15 @@ export default {};
       text-transform: uppercase;
       border-right: 2px solid $primary-color;
       cursor: pointer;
-      &:hover {
+      &:hover , &.active {
         border-right: 2px solid $secondary-color;
         color: $secondary-color;
       }
     }
   }
   &__list {
-    display: inline-block;
-
+      display: flex;
+      flex-wrap: wrap;
     li {
       list-style: none;
       font-family: "Istok Web", "Microsoft YaHei New", "Microsoft Yahei",
@@ -87,7 +119,8 @@ export default {};
       color: $primary-color;
       text-align: left;
       padding: 0.5rem;
-
+      margin-right: 2rem;
+      width: 25%;
       &:before {
         content: "";
         display: inline-block;
@@ -110,7 +143,7 @@ export default {};
       color: $light-primary-color;
       border-right: 2px solid $light-primary-color;
 
-      &:hover {
+      &:hover , &.active {
         border-right: 2px solid $light-secondary-color;
         color: $light-secondary-color;
       }

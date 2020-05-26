@@ -34,9 +34,9 @@ export default {
   },
   methods: {
     changeLocale(locale) {
-      console.log("entrei");
       //   i18n.locale = locale;
       this.$i18n.locale = locale;
+      this.$store.state.currentLocale = locale; 
       this.currentLanguage = locale;
     }
   }

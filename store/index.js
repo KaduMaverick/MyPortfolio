@@ -3,10 +3,13 @@ import Vuex from 'vuex'
 const createStore = () => {
     return new Vuex.Store({
         state: {
-            mode: 'dark'
+            mode: 'dark',
+            currentLocale: null,
         },
         mutations: {},
-        getters: {}
+        getters: {
+            getCurrentLocale: state => () => state.currentLocale,
+          }
     })
 }
 
