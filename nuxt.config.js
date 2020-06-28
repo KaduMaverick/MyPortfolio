@@ -24,15 +24,10 @@ module.exports = {
   /*
    ** Global CSS
    */
-<<<<<<< HEAD
   css: [
 
   ],
   
-=======
-  css: [],
-
->>>>>>> dev
   /*
    ** Plugins to load before mounting the App
    */
@@ -83,9 +78,9 @@ module.exports = {
      */
     extend(config, ctx) { },
   },
-  server: {
-    port: 8000, // default: 3000     
-    host: '192.168.0.10', // default: localhost   
-  },   // other configs 
+  // server: {
+  //   port: 8000, // default: 3000     
+  //   host: '192.168.0.10', // default: localhost   
+  // },   // other configs 
 
 };
