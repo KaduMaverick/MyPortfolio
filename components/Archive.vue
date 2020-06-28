@@ -27,12 +27,21 @@
             </tr>
           </thead>
           <tbody>
+<<<<<<< HEAD
+            <tr v-for="project in projects" :key="project.title" @click="goTo(project.content.link)">
+              <th class="year">{{ project.content.year }}</th>
+              <th>{{ project.content.project }}</th>
+              <th>{{ project.content.made_at }}</th>
+              <th>{{ project.content.tech }}</th>
+            </tr>            
+=======
             <tr v-for="project in projects" :key="project.project" @click="goTo(project.link)">
               <th class="year">{{ project.year }}</th>
               <th>{{ project.project }}</th>
               <th>{{ project.made_at }}</th>
               <th>{{ project.tech }}</th>
             </tr>
+>>>>>>> dev
           </tbody>
         </table>
       </div>

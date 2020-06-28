@@ -4,7 +4,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Kadu Maverick",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -24,24 +24,35 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+
+  ],
 
   /*
    ** Plugins to load before mounting the App
    */
 
-  plugins: ["~/plugins/i18n.js"],
+  plugins: ["~/plugins/i18n.js", { src: '~plugins/ga.js', mode: 'client' }],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: [
+
+  ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    [
+      'storyblok-nuxt',
+      {
+        accessToken: 'i9cQAaQmCZtDA86KVsVgbQtt',
+        cacheProvider: 'memory'
+      }
+    ]
   ],
   styleResources: {
     scss: [
@@ -55,7 +66,9 @@ module.exports = {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+
+  },
   /*
    ** Build configuration
    */
@@ -65,9 +78,12 @@ module.exports = {
      */
     extend(config, ctx) { },
   },
-  server: {
-    port: 8000, // default: 3000     
-    host: '192.168.0.10', // default: localhost   
-  },   // other configs 
+  generate: {
+    fallback: true
+  },
+  // server: {
+  //   port: 8000, // default: 3000     
+  //   host: '192.168.0.10', // default: localhost   
+  // },   // other configs 
 
 };
