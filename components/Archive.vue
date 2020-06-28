@@ -27,24 +27,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th class="year">2020</th>
-              <th>GOOGLE</th>
-              <th>cyberpunk</th>
-              <th>Vuejs HTML SCSS</th>
-            </tr>
-            <tr>
-              <th class="year">2020</th>
-              <th>Hairdresser</th>
-              <th>12/09</th>
-              <th>Great idea</th>
-            </tr>
-            <tr>
-              <th class="year">2020</th>
-              <th>Hairdresser</th>
-              <th>Great idea</th>
-              <th>30</th>
-            </tr>
+            <tr v-for="project in projects" :key="project.title" @click="goTo(project.content.link)">
+              <th class="year">{{ project.content.year }}</th>
+              <th>{{ project.content.project }}</th>
+              <th>{{ project.content.made_at }}</th>
+              <th>{{ project.content.tech }}</th>
+            </tr>            
           </tbody>
         </table>
       </div>
@@ -54,7 +42,15 @@
 
 
 <script>
-export default {};
+export default {
+  props: ['projects'],
+  methods: {
+    goTo(url) {
+      url = 'https://' + url
+      window.open(url,'_blank');
+    }
+  }
+}
 </script>
 
 

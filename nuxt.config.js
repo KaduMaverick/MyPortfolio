@@ -24,7 +24,9 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+
+  ],
   
   /*
    ** Plugins to load before mounting the App
@@ -34,14 +36,23 @@ module.exports = {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: [
+
+  ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    [
+      'storyblok-nuxt',
+      {
+        accessToken: 'i9cQAaQmCZtDA86KVsVgbQtt',
+        cacheProvider: 'memory'
+      }
+    ]
   ],
   styleResources: {
     scss: [
@@ -54,7 +65,9 @@ module.exports = {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+
+  },
   /*
    ** Build configuration
    */
