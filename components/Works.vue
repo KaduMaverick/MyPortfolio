@@ -1,13 +1,12 @@
 <template>
   <section class="works">
-    <img class="works__img-bg" src="@/assets/img/worldmap.png" alt srcset />
     <div class="works__heading">
       <h1 class="title works__title">I’M PROUD OF</h1>
     </div>
 
     <div class="u-wrapper works__container">
       <div class="works__content">
-        <div class="works__content__project" v-for="n in 3" v-bind:key="n">
+        <div class="works__content__project">
           <h1 class="works__content__project__title">Tracker</h1>
           <p>Runlet provides an easy to use interface to manage jobs across a fleet of connected devices, including the capability of triggering remote executions and viewing the logs of running jobs in real-time.</p>
           <div class="works__content__project__img">
@@ -38,10 +37,14 @@ export default {};
     position: absolute;
   }
   &__container {
-    width: 100rem;
+    max-width: 100rem;
     padding: 12rem 0;
     position: relative;
     height: inherit;
+
+    @include mq(1099px){
+      padding: 0 7rem;
+    }
   }
   &__heading {
     line-height: 6.7rem;

@@ -46,6 +46,10 @@ export default {
   top: 5rem;
   left: 5rem;
   cursor: pointer;
+
+  @include respond(phone){
+    left: 3rem;
+  }
   
 
   .switch {

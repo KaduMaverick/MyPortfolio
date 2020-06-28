@@ -1,19 +1,28 @@
 <template>
   <div class="arsenal">
     <h1 class="title arsenal__title">Arsenal</h1>
-    <p class="arsenal__sub-title">Here are a few technologies I've been working with recently</p>
+    <p class="arsenal__sub-title">Just a little bit about what I know</p>
     <div class="arsenal__box">
       <div class="arsenal__col-1">
-        <ul class="arsenal__menu" >
-          <li v-for="(item, index) in arsenalOptions" :key="index" v-html="item" v-bind:class="currentOption === item ? 'active' : ''" @click="changeOption(item)"></li>
+        <ul class="arsenal__menu">
+          <li
+            v-for="(item, index) in arsenalOptions"
+            :key="index"
+            v-html="item"
+            v-bind:class="currentOption === item ? 'active' : ''"
+            @click="changeOption(item)"
+          ></li>
         </ul>
       </div>
       <div class="arsenal__col-2">
         <ul class="arsenal__list">
-        <transition name="fade" v-for="(item, index) in arsenalData[currentOption]" v-bind:key="index">
-          <li  v-html="item">
-          </li>
-        </transition>
+          <transition
+            name="fade"
+            v-for="(item, index) in arsenalData[currentOption]"
+            v-bind:key="index"
+          >
+            <li v-html="item"></li>
+          </transition>
         </ul>
       </div>
     </div>
@@ -22,39 +31,40 @@
 
 <script>
 export default {
-  data (){
+  data() {
     return {
       currentOption: null,
-      arsenalOptions: this.$t('arsenal.arsenalOptions'),
-      arsenalData: this.$t('arsenal.arsenalData'),
-    }
+      arsenalOptions: this.$t("arsenal.arsenalOptions"),
+      arsenalData: this.$t("arsenal.arsenalData")
+    };
   },
-  created(){
-    this.currentOption = this.arsenalOptions[0] 
+  created() {
+    this.currentOption = this.arsenalOptions[0];
     // console.log(this.i18n.locale)
   },
   methods: {
-    changeOption(value){
-      this.currentOption = value
+    changeOption(value) {
+      this.currentOption = value;
     }
   },
   computed: {
     getCurrentLocale() {
-      return this.$store.state.currentLocale
+      return this.$store.state.currentLocale;
     }
   },
   watch: {
     getCurrentLocale(newLocale, oldLocale) {
-      this.arsenalOptions = this.$t('arsenal.arsenalOptions')
-      this.arsenalData = this.$t('arsenal.arsenalData')
+      this.arsenalOptions = this.$t("arsenal.arsenalOptions");
+      this.arsenalData = this.$t("arsenal.arsenalData");
     }
   }
 };
 </script>
 
 <style lang="scss">
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
@@ -70,10 +80,18 @@ export default {
     font-size: 1.8rem;
     margin-left: 22rem;
     margin-top: -2rem;
+
+    @include respond(phone){
+      margin-left: 0;
+    }
   }
 
   &__box {
     display: flex;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   //   &__col-1 {
@@ -83,10 +101,14 @@ export default {
     display: inline-block;
     padding: 0 2rem;
     width: 100%;
+
+    @include respond(phone){
+      padding: 0;
+      padding-top: 2rem;
+    }
   }
 
   &__menu {
-    
     li {
       list-style: none;
       font-family: "Istok Web", "Microsoft YaHei New", "Microsoft Yahei",
@@ -100,15 +122,28 @@ export default {
       text-transform: uppercase;
       border-right: 2px solid $primary-color;
       cursor: pointer;
-      &:hover , &.active {
+      &:hover,
+      &.active {
         border-right: 2px solid $secondary-color;
         color: $secondary-color;
+      }
+
+      @include respond(phone) {
+        display: inline-block;
+        border-right: unset;
+        border-bottom: 2px solid $primary-color;
+        &:hover,
+        &.active {
+          border-right: unset;
+          border-bottom: 2px solid $secondary-color;
+        }
       }
     }
   }
   &__list {
-      display: flex;
-      flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+
     li {
       list-style: none;
       font-family: "Istok Web", "Microsoft YaHei New", "Microsoft Yahei",
@@ -130,6 +165,11 @@ export default {
         background: $secondary-color;
         margin-right: 1rem;
       }
+
+      @include respond(phone){
+        min-width: 40%;
+        width: fit-content;
+      }
     }
   }
 }
@@ -143,7 +183,8 @@ export default {
       color: $light-primary-color;
       border-right: 2px solid $light-primary-color;
 
-      &:hover , &.active {
+      &:hover,
+      &.active {
         border-right: 2px solid $light-secondary-color;
         color: $light-secondary-color;
       }

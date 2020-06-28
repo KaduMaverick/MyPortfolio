@@ -16,7 +16,7 @@
       </div>
 
       <div class="archive__content">
-        <p>Here are projects that I’ve worked in</p>
+        <p class="archive__sub-title">Here are some projects that I’ve worked in</p>
         <table>
           <thead>
             <tr>
@@ -27,23 +27,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th class="year">2020</th>
-              <th>GOOGLE</th>
-              <th>cyberpunk</th>
-              <th>Vuejs HTML SCSS</th>
-            </tr>
-            <tr>
-              <th class="year">2020</th>
-              <th>Hairdresser</th>
-              <th>12/09</th>
-              <th>Great idea</th>
-            </tr>
-            <tr>
-              <th class="year">2020</th>
-              <th>Hairdresser</th>
-              <th>Great idea</th>
-              <th>30</th>
+            <tr v-for="project in projects" :key="project.project" @click="goTo(project.link)">
+              <th class="year">{{ project.year }}</th>
+              <th>{{ project.project }}</th>
+              <th>{{ project.made_at }}</th>
+              <th>{{ project.tech }}</th>
             </tr>
           </tbody>
         </table>
@@ -54,7 +42,18 @@
 
 
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      projects: [{project: 'Google', year: '2020', made_at: 'M3', tech: 'Vuejs/NuxtJs', link: 'https://www.google.com.br'}]
+    }
+  },
+  methods:{
+    goTo(url){
+      window.open(url, '_blank')
+    }
+  }
+};
 </script>
 
 
@@ -68,10 +67,14 @@ export default {};
     position: absolute;
   }
   &__container {
-    width: 100rem;
+    max-width: 100rem;
     padding: 12rem 0;
     position: relative;
     height: inherit;
+
+    @include mq(1099px){
+      padding: 0 7rem;
+    }
   }
   &__heading {
     line-height: 6.7rem;
@@ -84,15 +87,16 @@ export default {};
     }
   }
 
+&__sub-title{
+      text-align: right;
+      color:$primary-color;
+}
   &__content {
     font-size: 2.2rem;
-    p {
-      text-align: right;
-    }
-
+  
     table {
       color: $primary-color;
-      width: 100%;
+      max-width: 100%;
       border-collapse: collapse;
       margin-top: 10rem;
       th {
@@ -103,7 +107,7 @@ export default {};
         color: $secondary-color;
       }
       thead {
-        font-family: Istok Web;
+        font-family: $font-family-2;
         font-style: normal;
         font-weight: bold;
         font-size: 2.2rem;
@@ -114,9 +118,7 @@ export default {};
       }
 
       tbody {
-        font-family: "Istok Web", "Microsoft YaHei New", "Microsoft Yahei",
-          "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
-        font-family: Istok Web;
+        font-family: $font-family;
         font-style: normal;
         font-weight: lighter;
         font-size: 1.8rem;
@@ -133,6 +135,10 @@ export default {};
 }
 
 .light .archive {
+  &__sub-title{
+      text-align: right;   
+      color:$light-primary-color;
+  }
   &__content {
     table {
       color: $light-primary-color;

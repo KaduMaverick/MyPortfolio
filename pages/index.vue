@@ -3,8 +3,8 @@
     <Header/>
     <About/>
     <Works/>
-    <Projects/>
-    <Archive/>
+    <!-- <Projects/> -->
+    <!-- <Archive/> -->
   </div>
 </template>
 
