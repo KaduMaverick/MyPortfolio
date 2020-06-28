@@ -46,6 +46,7 @@ export default {
   top: 5rem;
   left: 5rem;
   cursor: pointer;
+  
 
   .switch {
     background: #ffffff;
