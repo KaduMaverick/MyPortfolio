@@ -60,6 +60,10 @@ export default {
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.35);
   }
+
+  @include respond(tab-land){
+    left: 2rem;
+  }
   &__list {
     text-align: center;
   }

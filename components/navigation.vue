@@ -96,6 +96,10 @@ export default {
   top: 5rem;
   cursor: pointer;
 
+  @include respond(phone){
+    right: 3rem;
+  }
+
   &::after,
   &::before {
     content: "";

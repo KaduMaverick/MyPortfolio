@@ -15,7 +15,7 @@ module.exports = {
       },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    link:[{ href: "https://fonts.googleapis.com/css?family=Istok+Web&display=swap", rel:"stylesheet"}]
+    link: [{ href: "https://fonts.googleapis.com/css?family=Istok+Web&display=swap", rel: "stylesheet" }]
   },
   /*
    ** Customize the progress-bar color
@@ -24,10 +24,15 @@ module.exports = {
   /*
    ** Global CSS
    */
+<<<<<<< HEAD
   css: [
 
   ],
   
+=======
+  css: [],
+
+>>>>>>> dev
   /*
    ** Plugins to load before mounting the App
    */
@@ -56,11 +61,12 @@ module.exports = {
   ],
   styleResources: {
     scss: [
-        'assets/scss/variables.scss',
-        'assets/scss/reset.scss'
-  
+      'assets/scss/variables.scss',
+      'assets/scss/reset.scss',
+      'assets/scss/mixins.scss'
+
     ]
-},
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -75,6 +81,11 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
+    extend(config, ctx) { },
   },
+  server: {
+    port: 8000, // default: 3000     
+    host: '192.168.0.10', // default: localhost   
+  },   // other configs 
+
 };

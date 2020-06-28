@@ -126,6 +126,7 @@ export default {
   bottom: 6rem;
   right: 6rem;
   z-index: 1000;
+
   &:after {
     content: "";
     display: block;
@@ -137,6 +138,11 @@ export default {
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.35);
   }
+
+  @include respond(tab-land){
+    right: 2rem;
+  }
+
   &__list {
     text-align: center;
 

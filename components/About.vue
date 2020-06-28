@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <div class="about__container">
+    <div class="about__title-box">
       <div class="about__heading">
         <svg
           width="5"
@@ -20,6 +20,8 @@
         </svg>
         <h1>WHO AM I?</h1>
       </div>
+    </div>
+    <div class="about__container">
       <div class="about__content">
         <div class="about__content__text">
           <p>
@@ -59,14 +61,26 @@ export default {
   min-height: 100vh;
 
   &__container {
-    width: 100rem;
+    max-width: 100rem;
     margin: 0 auto;
     position: relative;
     height: inherit;
   }
+  &__title-box {
+    position: absolute;
+    max-width: 100rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+
+    @include mq(1077px) {
+      padding-left: 4rem;
+    }
+  }
   &__heading {
     line-height: 6.7rem;
-    position: absolute;
+    position: sticky;
     left: 0;
     top: 0;
     // transform: rotate(-250deg);
@@ -79,20 +93,37 @@ export default {
         "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
       color: $secondary-color;
       display: inline-block;
+
+      @include respond(phone){
+        font-size: 4.5rem;
+      }
     }
   }
 
   &__content {
     padding: 12rem 0 12rem 9rem;
+
+    @include respond(tab-land) {
+      padding: 12rem 9rem 12rem 9rem;
+    }
+
+    @include mq(1077px) {
+      padding: 12rem 9rem 12rem 13rem;
+    }
+
+    @include respond(phone) {
+      padding: 12rem 6rem 12rem 12rem;
+    }
     &__text {
       display: inline-block;
-      // max-width: 50rem;
       font-size: 2.8rem;
       line-height: 4rem;
       text-align: center;
-      // color: #ffffff;
-      // max-width: 60rem;
-      // margin-top: 7.2rem;
+
+      @include respond(phone){
+        font-size: 2rem;
+        line-height: 3.2rem;
+      }
     }
     p {
       //   display: inline-block;

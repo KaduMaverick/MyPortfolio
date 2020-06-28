@@ -94,6 +94,10 @@ p {
     "微软雅黑", 宋体, SimSun, STXihei, "华文细黑";
   color: #8cb9b4;
   display: inline-block;
+
+  @include respond(phone){
+    font-size: 4.5rem;
+  }
 }
 
 b.green {

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Header />
-    <About />
-    <Works />
-    <Projects />
-    <Archive :projects="projects"/>
+    <Header/>
+    <About/>
+    <Works/>
+    <!-- <Projects/> -->
+    <!-- <Archive/> -->
   </div>
 </template>
 
