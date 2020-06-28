@@ -78,6 +78,9 @@ module.exports = {
      */
     extend(config, ctx) { },
   },
+  generate: {
+    fallback: true
+  },
   // server: {
   //   port: 8000, // default: 3000     
   //   host: '192.168.0.10', // default: localhost   
