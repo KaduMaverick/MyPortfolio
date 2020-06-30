@@ -8,18 +8,18 @@
     <div class="nav-bg" v-bind:class="[ isMenuShown ? 'nav-bg--scroll-down' : 'nav-bg--scroll-up']">
       <div v-if="isMenuShown" class="main-nav">
         <ul class="main-nav__items">
-          <li class="main-nav__item" data-bg="featured-work-2">
-            <a href class="main-nav__link">{{ this.$t('nav.projects') }}</a>
+          <li class="main-nav__item" @click="isMenuShown = !isMenuShown" data-bg="featured-work-2">
+            <nuxt-link to="/"  class="main-nav__link">{{ this.$t('nav.projects') }}</nuxt-link>
           </li>
-          <li class="main-nav__item" data-bg="interactive-web-design">
+          <!-- <li class="main-nav__item" data-bg="interactive-web-design">
             <a href class="main-nav__link">{{ this.$t('nav.skills') }}</a>
           </li>
           <li class="main-nav__item" @mouseover="changeVideoBg()" data-bg="about-us">
             <a href class="main-nav__link">{{ this.$t('nav.about') }}</a>
-          </li>
-          <li class="main-nav__item" data-bg="corporate-identity-branding">
+          </li>-->
+          <!-- <li class="main-nav__item" @click="isMenuShown = !isMenuShown" data-bg="corporate-identity-branding">
             <nuxt-link to="/contact" class="main-nav__link">{{ this.$t('nav.contact') }}</nuxt-link>
-          </li>
+          </li>  -->
         </ul>
       </div>
       <div class="video">
@@ -39,6 +39,9 @@ export default {
   methods: {
     changeVideoBg() {
       // this.$refs.videoSource.src = this.$refs.videoSource.dataset.src;
+    },
+    teste(){
+      alert('teste')
     }
   },
   mounted() {

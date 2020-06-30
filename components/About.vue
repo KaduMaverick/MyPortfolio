@@ -18,18 +18,17 @@
             stroke-width="4"
           />
         </svg>
-        <h1>WHO AM I?</h1>
+        <h1>{{ this.$t('about.heading')}}</h1>
       </div>
     </div>
     <div class="about__container">
       <div class="about__content">
         <div class="about__content__text">
-          <p>
+          <p v-html="this.$t('about.first-paragraph')">
             Hello! I'm Kadu, a developer based in Brazil, who enjoys
-            <b
-              class="green"
-            >solving problems</b> with tech.
+            <b class="green">solving problems</b> with tech.
             <b class="yellow">I develop exceptional websites and web apps</b> that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.
+            
           </p>
           <p>
             Shortly after coming back from China,where I was living and working as a English teacher, I started my learning path into
@@ -39,7 +38,7 @@
           </p>
         </div>
         <!-- <img src="@/assets/img/me-portrait.png" alt="" srcset=""> -->
-        <Arsenal />
+        <!-- <Arsenal /> -->
       </div>
     </div>
   </section>

@@ -1,21 +1,44 @@
-{ "nav":{
-  "projects": "Projects",
-  "skills": "Skills",
-  "about": "About",
-  "contact":"Contact"
-},
+{
+  "nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "about": "About",
+    "contact": "Contact"
+  },
   "home": {
     "greeting": "Hi, I'm a",
     "heading": "Developer",
     "subHeading": "& I code/design things for the web.",
     "paragraph": "I'm a Developer based in Brazil, fascinated at creating/building exceptional, high-quality websites and applications. My focus is always on modularity, architecture and beautiful design."
   },
+  "about": {
+    "heading": "WHO AM I?",
+    "first-paragraph": "Hello! I'm Kadu, a developer based in Brazil, who enjoys <b class='green'>solving problems</b> with tech. <b class='yellow'>I develop exceptional websites and web apps</b> that provide intuitive, pixel-perfect user interfaces with efficient and modern backends."
+  },
   "arsenal": {
     "arsenalOptions": ["knowledge", "skills", "tools"],
-      "arsenalData": {
-        "knowledge": ["Mandarim", "Portuguese", "Spanish", "English","Mandarim", "Portuguese", "Spanish", "English","Mandarim", "Portuguese", "Spanish", "English"],
-        "skills": ["WebDevelopment", "Photo Manipulation", "Video Editing", "English Teaching"],
-        "tools": ["Vscode", "Atom", "Photoshop", "AdobeXD"]
-      }
+    "arsenalData": {
+      "knowledge": [
+        "Mandarim",
+        "Portuguese",
+        "Spanish",
+        "English",
+        "Mandarim",
+        "Portuguese",
+        "Spanish",
+        "English",
+        "Mandarim",
+        "Portuguese",
+        "Spanish",
+        "English"
+      ],
+      "skills": [
+        "WebDevelopment",
+        "Photo Manipulation",
+        "Video Editing",
+        "English Teaching"
+      ],
+      "tools": ["Vscode", "Atom", "Photoshop", "AdobeXD"]
+    }
   }
 }

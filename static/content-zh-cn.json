@@ -1,24 +1,30 @@
-{"nav":{
-  "projects": "专案",
-  "skills": "身手",
-  "about": "关于我",
-  "contact":"联系"
-},
-    "home": {
-      "greeting": "嗨，我是",
-      "heading": "开发者",
-      "subHeading": "＆我为网络编写代码/设计.",
-      "paragraph": "我是位于巴西圣保罗的Web开发人员，专门从事构建（并偶尔设计）出色的高质量网站和应用程序"
-    },
-    "arsenal": {
-      "arsenalOptions": ["knowledge", "语言"],
-        "arsenalData": {
-          "knowledge": ["Mandarim", "Portuguese", "Spanish", "English"],
-          "语言": ["WebDevelopment", "Photo Manipulation", "Video Editing", "English Teaching"],
-          "tools": ["Vscode", "Atom", "Photoshop", "AdobeXD"]
-        }
+{
+  "nav": {
+    "projects": "专案",
+    "skills": "身手",
+    "about": "关于我",
+    "contact": "联系"
+  },
+  "home": {
+    "greeting": "嗨，我是",
+    "heading": "开发者",
+    "subHeading": "＆我为网络编写代码/设计.",
+    "paragraph": "我是位于巴西圣保罗的Web开发人员，专门从事构建（并偶尔设计）出色的高质量网站和应用程序"
+  },
+  "about": {
+    "heading": "我是谁"
+  },
+  "arsenal": {
+    "arsenalOptions": ["knowledge", "语言"],
+    "arsenalData": {
+      "knowledge": ["Mandarim", "Portuguese", "Spanish", "English"],
+      "语言": [
+        "WebDevelopment",
+        "Photo Manipulation",
+        "Video Editing",
+        "English Teaching"
+      ],
+      "tools": ["Vscode", "Atom", "Photoshop", "AdobeXD"]
     }
   }
-  
-
-  
+}
