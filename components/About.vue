@@ -30,11 +30,9 @@
             <b class="yellow">I develop exceptional websites and web apps</b> that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.
             
           </p>
-          <p>
+          <p v-html="this.$t('about.second-paragraph')">
             Shortly after coming back from China,where I was living and working as a English teacher, I started my learning path into
-            <b
-              class="purple"
-            >computer science</b> and I developed a passion for building things and solving problems.
+            <b class="purple" >computer science</b> and I developed a passion for building things and solving problems.
           </p>
         </div>
         <!-- <img src="@/assets/img/me-portrait.png" alt="" srcset=""> -->

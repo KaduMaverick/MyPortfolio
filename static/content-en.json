@@ -13,7 +13,8 @@
   },
   "about": {
     "heading": "WHO AM I?",
-    "first-paragraph": "Hello! I'm Kadu, a developer based in Brazil, who enjoys <b class='green'>solving problems</b> with tech. <b class='yellow'>I develop exceptional websites and web apps</b> that provide intuitive, pixel-perfect user interfaces with efficient and modern backends."
+    "first-paragraph": "Hello! I'm Kadu, a developer based in Brazil, who enjoys <b class='green'>solving problems</b> with tech. <b class='yellow'>I develop exceptional websites and web apps</b> that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.",
+    "second-paragraph": "Shortly after coming back from China,where I was living and working as a English teacher, I started my learning path into <b class='purple'>computer science</b> and I developed a passion for building things and solving problems."
   },
   "arsenal": {
     "arsenalOptions": ["knowledge", "skills", "tools"],
