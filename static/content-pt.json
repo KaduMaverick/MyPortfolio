@@ -2,7 +2,11 @@
   "home": {
     "greeting": "Oi, eu sou um",
     "heading": "Desenvolvedor",
-    "subHeading": "Desenvolvo para a web.",
-    "paragraph": "Je suis un développeur Web basé à  Brésil, spécialisé dans la création (et parfois la conception) de sites Web et d'applications exceptionnels de haute qualité"
+    "subHeading": "Crio aplicativos e aplicações para a web.",
+    "paragraph": "Sou um desenvolvedor, fascinado por criar / desenvolver aplicativos e aplicações web de alta qualidade. Meu foco é sempre em modularidade, arquitetura e design. "
+  },
+  "about": {
+    "heading": "QUEM SOU EU?",
+    "first-paragraph": "Olá! Sou Kadu, desevolvedor e gosto de <b class='green'>resolver problemas</b> com tecnologia. <b class='yellow'>Desenvolvo aplicações web e apps excepcionais</b>, intuitivos, pixel-perfect UI com back-ends eficientes e modernos."
   }
 }
