@@ -5,6 +5,9 @@
     "about": "Sobre",
     "contact":"Contacto"
   },
+  "about": {
+    "heading": "¿Quien soy yo?"
+  },
   "home": {
     "greeting": "Hola, soy un",
     "heading": "Desarrollador",
