@@ -14,6 +14,14 @@ export default {
       currentThemeMode: this.$store.state.mode
     };
   },
+  mounted() {
+    if(window.matchMedia('(prefers-color-scheme: light)').matches){
+        this.$store.state.mode = "light";
+        this.currentThemeMode = "light";
+        document.body.classList.add("light-theme");
+    }
+    
+  },
   methods: {
     switchMode() {
       if (this.currentThemeMode == "light") {
