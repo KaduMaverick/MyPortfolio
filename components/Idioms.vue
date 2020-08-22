@@ -11,11 +11,11 @@
         v-bind:class="currentLanguage == 'pt' ?  'idioms__items--active' : ''"
         class="idioms__items"
       >PT</li>
-      <li
+      <!-- <li
         v-on:click="changeLocale('es')"
         v-bind:class="currentLanguage == 'es' ?  'idioms__items--active' : ''"
         class="idioms__items"
-      >ES</li>
+      >ES</li> -->
       <li
         v-on:click="changeLocale('zncn')"
         v-bind:class="currentLanguage == 'zncn' ?  'idioms__items--active' : ''"
@@ -73,7 +73,7 @@ export default {
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: 2.5rem;
+    line-height: 25px;
     cursor: pointer;
     &--active,
     &:hover {

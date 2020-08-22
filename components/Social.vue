@@ -59,7 +59,7 @@
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/maycon-douglas-guedes-9168a4178/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/kadu-maverick-9168a4178/" target="_blank" rel="noopener noreferrer">
         <svg
           class="social__svg-icon"
           width="25"
