@@ -32,7 +32,7 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
 
-  plugins: ["~/plugins/i18n.js", { src: '~plugins/ga.js', mode: 'client' }],
+  plugins: ["~/plugins/i18n.js", "./plugins/maz-ui", { src: '~plugins/ga.js', mode: 'client' }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -52,7 +52,11 @@ module.exports = {
         accessToken: 'i9cQAaQmCZtDA86KVsVgbQtt',
         cacheProvider: 'memory'
       }
-    ]
+    ],
+    ['@netsells/nuxt-hotjar', {
+      id: '2000942',
+      sv: '6',
+    }],
   ],
   styleResources: {
     scss: [
@@ -73,10 +77,20 @@ module.exports = {
    ** Build configuration
    */
   build: {
+      babel: {
+        plugins: [
+          [
+            'component', {
+              libraryName: 'maz-ui',
+              styleLibraryName: 'css'
+            }
+          ]
+        ]
+      },    
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) { },
+    // extend(config, ctx) { },
   },
   generate: {
     fallback: true

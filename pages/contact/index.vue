@@ -29,6 +29,7 @@
           <label for="email" class="form__label">Email</label>
         </div>
 
+        <MazPhoneNumberInput v-model="yourValue" />
         <div class="form__group">
           <textarea
             type="password"
@@ -38,7 +39,21 @@
           />
           <label for="message" class="form__label">message</label>
         </div>
-        <a href="javascript:void(0)" class="form__btn" @click="login()">LOGIN</a>
       </form>
   </section>
 </template>
+<script>
+
+
+export default {
+    
+}
+</script>
+
+<style lang="scss">
+    .contact{
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 300px;
+    }
+</style>

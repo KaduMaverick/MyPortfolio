@@ -2,9 +2,10 @@
   <div>
     <Header/>
     <About/>
-    <!-- <Works/> -->
-    <!-- <Projects/> -->
+    <!-- <Works/>
+    <Projects/> -->
     <!-- <Archive/> -->
+    <!-- <Contact/>  -->
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import About from "~/components/About.vue";
 import Works from "~/components/Works.vue";
 import Projects from "~/components/Projects.vue";
 import Archive from "~/components/Archive.vue";
+import Contact from "~/components/Contact.vue";
 
 export default {
   components: {
@@ -21,7 +23,8 @@ export default {
     About,
     Works,
     Projects,
-    Archive
+    Archive,
+Contact
   },
   data() {
     return { story: { content: {} } };
