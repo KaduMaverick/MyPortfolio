@@ -5,7 +5,7 @@
     <!-- <Works/>
     <Projects/> -->
     <!-- <Archive/> -->
-    <!-- <Contact/>  -->
+    <Contact/> 
   </div>
 </template>
 
