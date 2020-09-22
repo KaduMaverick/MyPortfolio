@@ -1,6 +1,6 @@
 <template>
   <section class="contact">
-      <form class="form">
+      <form class="form" name="contactus" action="/contact" method="post"  netlify netlify-honeypot="bot-field">
         <div class="form__group">
           <input
             type="text"
@@ -21,7 +21,7 @@
         </div>
         <div class="form__group">
           <input
-            type="password"
+            type=""
             placeholder=""
             class="form__input"
             id="email"
@@ -29,7 +29,10 @@
           <label for="email" class="form__label">Email</label>
         </div>
 
-        <MazPhoneNumberInput v-model="yourValue" />
+        <div class="form__group">
+             <MazPhoneNumberInput v-model="yourValue" />
+        </div>
+
         <div class="form__group">
           <textarea
             type="password"
@@ -55,5 +58,33 @@ export default {
         max-width: 500px;
         margin: 0 auto;
         margin-top: 300px;
+    }
+
+    .form{
+
+      &__group{
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      &__label{
+        position: absolute;
+        font-size: 14px;
+        top: 1.1rem;
+        left: 1.1rem;
+        display: none;
+      }
+      
+      &__input{
+        width: 100%;
+        outline: none;
+        border: 1px solid #444444;
+        border-radius: 5px;
+        padding: 1.1rem;
+      }
+
+      
+      
     }
 </style>
