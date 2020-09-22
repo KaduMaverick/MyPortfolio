@@ -77,23 +77,33 @@ module.exports = {
    ** Build configuration
    */
   build: {
-      babel: {
-        plugins: [
-          [
-            'component', {
-              libraryName: 'maz-ui',
-              styleLibraryName: 'css'
-            }
-          ]
+    babel: {
+      plugins: [
+        [
+          'component', {
+            libraryName: 'maz-ui',
+            styleLibraryName: 'css'
+          }
         ]
-      },    
+      ]
+    },    
     /*
      ** You can extend webpack config here
      */
     // extend(config, ctx) { },
   },
   generate: {
-    fallback: true
+    fallback: true,
+     babel: {
+      plugins: [
+        [
+          'component', {
+            libraryName: 'maz-ui',
+            styleLibraryName: 'css'
+          }
+        ]
+      ]
+    },    
   },
   // server: {
   //   port: 8000, // default: 3000     
